@@ -41,7 +41,7 @@ const ProductDetails = ({params}) => {
             </p>
           </div>
           <div>
-            <p className="leading-7">
+            <p className="leading-7 text-black">
              {product?.description}
             </p>
 
