@@ -1,6 +1,7 @@
 import React from 'react'
 import data from '../../data/data.json'
 import Image from 'next/image'
+import Link from 'next/link';
 export const metadata = {
   title: "Lws Shop Products",
   description: "The best place to buy your favorite products",
@@ -37,7 +38,7 @@ const ProductDetails = ({params}) => {
         </div>
         <div className="w-full lg:w-5/12">
           <h1 className="italic text-xl lg:text-3xl font-serif font-semibold text-black">{product?.title}</h1>
-          <span className="text-[#919090] my-3">{product?.category}</span>
+          <Link href={`/category/${product?.category}`} className="text-[#919090] my-3">{product?.category}</Link>
           <div className="mt-3 flex items-center justify-start gap-1">
             {Array(Math.round(product?.rating)).fill().map((_,i)=><Image key={i} src="/star.svg" width={20}  height={10} alt="" />
             )}
