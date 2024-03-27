@@ -1,6 +1,16 @@
 import React from 'react'
 import data from '../../data/data.json'
 import Image from 'next/image'
+export const metadata = {
+  title: "Lws Shop Products",
+  description: "The best place to buy your favorite products",
+};
+export function generateStaticParams() {
+  
+  return data?.products.map(item=>{
+    id:item?.id
+  })
+}
 const ProductDetails = ({params}) => {
     const product =data?.products.filter(item=>item?.id==params?.id)[0]
    const getdiscountedPrice =(price,percentage)=>{

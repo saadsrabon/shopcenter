@@ -1,7 +1,12 @@
 import React from 'react';
 import data from '../../data/data.json';
 import Product from '@/app/components/product';
-
+export function generateStaticParams() {
+  
+    return data?.products.map(item=>{
+      categoryName:item?.category
+    })
+  }
 const CategoryProducts = ({ params }) => {
     const { categoryName } = params;
     const itemsTo = data?.products;

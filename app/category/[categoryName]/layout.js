@@ -2,7 +2,10 @@ import NavButton from '@/app/components/NavButton';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react'
-
+export const metadata = {
+  title: "Lws Shop Categories",
+  description: "The best place to buy your favorite products",
+};
  const CategoryLayout = ({children}) => {
     
   return (
